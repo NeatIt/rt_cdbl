@@ -72,7 +72,7 @@ const TableComponent: FC<Props> = ({ columns }) => {
 				>
 					<TableRow>
 						<TablePagination
-							rowsPerPageOptions={[5]}
+							rowsPerPageOptions={[6]}
 							colSpan={4}
 							count={total}
 							rowsPerPage={rowsPerPage}

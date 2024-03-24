@@ -18,9 +18,9 @@ import { TableResponseData, TableItemData } from 'types/table';
 
 export const DEFAULT_TABLE_DATA = {
 	page: 1,
-	per_page: 5,
-	total: 12,
-	total_pages: 3,
+	per_page: 6,
+	total: 6,
+	total_pages: 1,
 	data: [],
 	support: {}
 };
