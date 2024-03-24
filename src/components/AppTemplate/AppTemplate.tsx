@@ -1,10 +1,12 @@
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 // Import Types
 import { FCWithChildren } from 'types/common';
 
 const AppTemplate: FCWithChildren = ({ children }) => {
-	return <BrowserRouter>{children}</BrowserRouter>;
+	return (
+		<HashRouter future={{ v7_startTransition: true }}>{children}</HashRouter>
+	);
 };
 
 export default AppTemplate;
