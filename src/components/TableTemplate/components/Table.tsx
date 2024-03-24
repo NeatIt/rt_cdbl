@@ -70,24 +70,26 @@ const TableComponent: FC<Props> = ({ columns }) => {
 						['.MuiTablePagination-spacer ']: { display: 'none' }
 					}}
 				>
-					<TablePagination
-						rowsPerPageOptions={[5]}
-						colSpan={4}
-						count={total}
-						rowsPerPage={rowsPerPage}
-						page={page}
-						slotProps={{
-							select: {
-								inputProps: {
-									'aria-label': 'rows per page'
-								},
-								native: true
-							}
-						}}
-						onPageChange={onPageChange}
-						ActionsComponent={TablePaginationActions}
-						sx={{ minWidth: '300px' }}
-					/>
+					<TableRow>
+						<TablePagination
+							rowsPerPageOptions={[5]}
+							colSpan={4}
+							count={total}
+							rowsPerPage={rowsPerPage}
+							page={page}
+							slotProps={{
+								select: {
+									inputProps: {
+										'aria-label': 'rows per page'
+									},
+									native: true
+								}
+							}}
+							onPageChange={onPageChange}
+							ActionsComponent={TablePaginationActions}
+							sx={{ minWidth: '300px' }}
+						/>
+					</TableRow>
 				</TableFooter>
 			</Table>
 		</TableContainer>
