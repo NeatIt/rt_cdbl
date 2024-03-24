@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Box from '@mui/material/Box';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// Import components
+import AppTemplate from 'components/AppTemplate/AppTemplate';
+import AppLayout from 'components/AppLayout/AppLayout';
+import NoMatch from 'components/NoMatch/NoMatch';
+import ProductsTable from 'components/ProductsTable/ProductsTable';
+
+const App = () => {
+	return (
+		<Box display="flex" flexDirection="column" minHeight="100vh">
+			<AppTemplate>
+				<Routes>
+					<Route path="/" element={<AppLayout />}>
+						<Route index element={<ProductsTable />} />
+						<Route path="*" element={<NoMatch />} />
+					</Route>
+				</Routes>
+			</AppTemplate>
+		</Box>
+	);
+};
 
 export default App;
